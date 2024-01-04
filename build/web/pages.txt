@@ -1,0 +1,6 @@
+Login Page
+Landing Page
+staff Page
+student Page
+course Page
+department Page

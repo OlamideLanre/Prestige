@@ -1,0 +1,133 @@
+@import url('Https://fonts.googleapis.com/css2?family=Poppins');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+/*:root{
+    --bg-color: #2d3250;
+    --second-bg-color: #424769;
+    --text-color: #f9b17a;
+    --main-color: #676f9d;
+
+}*/
+body{
+    background-color: #2d3250;
+    color: #f9b17a;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    width: 700px;
+    height: 560px;
+    border-radius: 10px;
+    background-color: #424769;
+    justify-content: space-between;
+}
+.wrapper .content{
+    display: flex;
+    width: 500px;
+    height: 500px;
+    
+}
+.wrapper .content input{
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: #676f9d;
+    color: #fff;
+}
+.wrapper .content .left-pane .inner-content{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 500px;
+    border-right: 1.5px solid #2d3250;
+}
+.wrapper .content .left-pane .inner-content a{
+    font-style: 10px;
+    color: #fff;
+}
+.wrapper .content .left-pane .inner-content a, span{
+    font-size: 10px;
+}
+.wrapper .content .right-pane .inner-content{
+    width: 350px;
+    height: 500px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.wrapper .content .right-pane .inner-content .txt{
+    margin-top: -170px;
+    /* font-size: 25px; */
+}
+.wrapper .content .right-pane img{
+    width: 500px;
+}
+
+#btn{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #f9b17a;
+
+}
+
+
+@media only screen and (max-width: 700px){
+    .wrapper{
+        width: 330px;
+        height: 670px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper .content{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .check{
+        width: 10px;
+    }
+    .txt{
+        display: none;
+    }
+    input{
+        width: 270px;
+        height: 35px;
+    }
+    .wrapper .content .right-pane{
+        height: 200px;
+        width: 330px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .wrapper .content .left-pane{
+        height: 500px;
+        width: 330px;
+    }
+}
