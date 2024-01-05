@@ -42,6 +42,7 @@ public class SingUpPs extends HttpServlet {
                 String password=request.getParameter("adminpass");
                 
                 try(PreparedStatement ps = con.prepareStatement(insert)) {
+                    if (!"".equals(fullName) && !"".equals(Email) && !"".equals(phone) && !"".equals(gender) && !"".equals(password)) {
                     ps.setString(1, fullName);
                     ps.setString(2, Email);
                     ps.setString(3, phone);
@@ -50,18 +51,24 @@ public class SingUpPs extends HttpServlet {
                     
                     ps.executeUpdate();
                     
-                    String select= "select * from admins";
-                    try(PreparedStatement ps1=con.prepareStatement(select)) {
-                        ResultSet rs= ps1.executeQuery();
-                        if (rs.next()) {
-                            out.write("success");
-                        } else {
-                            out.write("failed to fetch");
-                        }
-                        
-                    } catch (SQLException ex) {
-                        System.out.println(ex);
+                    out.write("created successfully");
+                    } else {
+                        out.write("All fields are required");
                     }
+                   
+                    
+//                    String select= "select * from admins";
+//                    try(PreparedStatement ps1=con.prepareStatement(select)) {
+//                        ResultSet rs= ps1.executeQuery();
+//                        if (rs.next()) {
+//                            out.write("success");
+//                        } else {
+//                            out.write("failed to fetch");
+//                        }
+//                        
+//                    } catch (SQLException ex) {
+//                        System.out.println(ex);
+//                    }
                     
                 } catch (SQLException e) {
                     System.out.println(e);
