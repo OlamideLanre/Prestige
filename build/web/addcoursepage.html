@@ -23,26 +23,25 @@
             </nav>
 
             <div class="boxes">
+                <form method="POST" action="CourseAdd">
                 <div class="inner-content">
                     <div class="left">
                         <h5>Course Name</h5>
-                        <input type="text">
-                        <h5>Course ID</h5>
-                        <input type="text">
-                        <h5>Staff ID</h5>
-                        <input type="text">
+                        <input type="text" id="coursename" name="coursename"/>
                         <h5>Department ID</h5>
-                        <input type="text">
-                            <a style="margin-top: 10px;" id="btn" href="#">ADD</a>
+                        <input type="text" id="deptID" name="deptID">
+                        <button type="submit" id="btn" style="margin-top: 10px">ADD</button>
+                            <!--<input type="submit" style="margin-top: 10px;" id="btn" >--> 
                             <a style="margin-top: 10px;" id="btn" href="#">UPDATE</a>
                     </div>
 
                     <div class="right">
-                        <img style="width: 300px;" height="300px" src="./images/casual-life-3d-boy-studying-remotely-with-tutor.png" alt="">
+                        <img style="width: 300px" height="300px" src="./images/casual-life-3d-boy-studying-remotely-with-tutor.png" alt="">
                     </div>
                    
      
                </div>
+                </form>
             </div>
             
         </div>
