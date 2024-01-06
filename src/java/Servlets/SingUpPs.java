@@ -51,7 +51,7 @@ public class SingUpPs extends HttpServlet {
                     
                     ps.executeUpdate();
                     
-                    out.write("created successfully");
+                    response.sendRedirect("signinpagePS.html");
                     } else {
                         out.write("All fields are required");
                     }
