@@ -1,6 +1,6 @@
 <%-- 
-    Document   : ViewCoursePage
-    Created on : Jan 6, 2024, 7:49:41 PM
+    Document   : ViewFacultyPage
+    Created on : Jan 7, 2024, 12:08:08 PM
     Author     : TM
 --%>
 
@@ -12,8 +12,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Course Page</title>
-    <link rel="stylesheet" href="./styles/viewcoursepage.css">
+    <title>View Faculty Page</title>
+    <link rel="stylesheet" href="./styles/viewfacultypage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
@@ -21,10 +21,10 @@
         <div class="content">
             <nav>
                 <div class="left">
-                    <a class="btn" href="./coursepage.html"><div class="logout"> <i class="fa fa-arrow-left" aria-hidden="true" style="color: #222;"></i>    Back</div></a>
+                    <a class="btn" href="./facultypage.html"><div class="logout"> <i class="fa fa-arrow-left" aria-hidden="true" style="color: #222;"></i>    Back</div></a>
                 </div>
                 <div style="width: 300px;" class="middle">
-                    <h2>VIEW COURSE PAGE</h2>
+                    <h2>VIEW FACULTY PAGE</h2>
                 </div>
                 <div class="right">
                     <img style="width: 100px;" src="./images/logo2.png" alt="logo">
@@ -34,10 +34,11 @@
             <div class="boxes">
                 <div class="inner-content">
                     <div class="dashboard">
-                        <h1>Courses</h1>
-                        <%
-                            try {
-                                    Class.forName("com.mysql.cj.jdbc.Driver");
+                        <h1>Faculty</h1>
+                        <% 
+                        
+                        try {
+                            Class.forName("com.mysql.cj.jdbc.Driver");
                             
                              String JDBC_URL="jdbc:mysql://localhost:3306/realworlddb";
                              String JDBC_USER="root";
@@ -45,49 +46,38 @@
                              
                              Connection con=DriverManager.getConnection(JDBC_URL,JDBC_USER,JDBC_PASSWORD);
                              
-//                             String jointSelect="SELECT c.Name,c.CourseID,s.StaffID,c.deptID from staff s join course c where c.deptID=s.StaffDeptID";
-                                String courseSelect="SELECT * FROM course";
-                             
-                             PreparedStatement ps = con.prepareStatement(courseSelect);
+                             String FacultyData="SELECT * FROM Faculty";
+                             PreparedStatement ps=con.prepareStatement(FacultyData);
                              ResultSet rs= ps.executeQuery();
                              
                              out.print("<div class='table-container'>");
                               out.print("<table>");
                               out.print("<thead>");
                               out.print("<tr>");
-                              out.print("<th>Course Name</th>");
-                              out.print(" <th>Course ID</th>");
-                              out.print(" <th>Departent ID</th>");
-//                              out.print("<th>Staff ID</th>");
-//                              out.print("<th>Department ID</th>");
+                              out.print(" <th>Faculty ID</th>");
+                              out.print(" <th>Faculty Name</th>");
                               out.print("<th>Action</th>");
                               out.print("</tr>");
                               out.print("</thead>");
                               out.print("<tbody>");
-                              
                              while (rs.next()) {                                     
-                                    int Courseid=rs.getInt("CourseID");
-                                    int deptID= rs.getInt("deptID");
-                                      String courseName= rs.getString("Name");
-//                                      String staffID=rs.getString("StaffID");
-//                                      String deptID= rs.getString("deptID");
-                                      out.print("<tr>");
-                                      out.print("<td>"+ courseName + "</td>");
-                                      out.print("<td>"+Courseid+"</td>");
-                                      out.print("<td>"+deptID+"</td>");
-//                                      out.print("<td>"+staffID+"</td>");
-//                                      out.print("<td>"+Courseid+"</td>");
+                                     int FacID=rs.getInt("FacultyID");
+                                     String FacName=rs.getString("FacultyName");
+                                     
+                                     out.print("<tr>");
+                                      out.print("<td>"+ FacID + "</td>");
+                                      out.print("<td>"+FacName+"</td>");
                                       out.print("<td>");
-                                      out.print(" <a class='edit' href='edit.jsp?id="+ Courseid +"'>Edit</a>");
+                                      out.print(" <a class='edit' href='edit.jsp?id="+ FacID +"'>Edit</a>");
                                       out.print("<a class='delete' href='#'>Delete</a>");
                                       out.print("</td>");
                                       out.print("</tr>");
                                  }
-                                } catch (Exception e) {
-                                    System.out.println(e);
-                                }
-                        
-                        %>
+                            } catch (Exception e) {
+                                System.out.println(e);
+                            }
+
+                        %>                
                                 <!-- Add more rows as needed -->
                                 </tbody>
                             </table>

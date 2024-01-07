@@ -13,47 +13,48 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
+
 /**
  *
- * @author TM
+ * @author HP
  */
-@WebServlet(name = "CourseAdd", urlPatterns = {"/CourseAdd"})
-public class CourseAdd extends HttpServlet {
-
-      private static final String JDBC_URL="jdbc:mysql://localhost:3306/realworlddb";
-    private static final String JDBC_USER="root";
-    private static final String JDBC_PASSWORD="";
-     
-  
+@WebServlet(name = "FacultyAdd", urlPatterns = {"/FacultyAdd"})
+public class FacultyAdd extends HttpServlet {
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/realworlddb";
+    private static final String JDBC_USER = "root";
+    private static final String JDBC_PASSWORD = "";
+    
+    
+    
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);    
 
-                 Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection con= DriverManager.getConnection(JDBC_URL,JDBC_USER,JDBC_PASSWORD);
-                System.out.println("Con Success");
+
+                System.out.print("connection successful");
                 
-                String courseInsert="INSERT INTO Course (Name, deptID) VALUES (?,?)";
+                String insert = "INSERT INTO faculty(FacultyName) VALUE (?)";
                 
-                String courseName= request.getParameter("coursename");
-                int cDeptID= Integer.valueOf(request.getParameter("deptID"));
+                String facultyName = request.getParameter("FacultyName");
                 
-                try(PreparedStatement c=con.prepareStatement(courseInsert)) {
-                    if (!courseName.isEmpty() && cDeptID != 0) {
-                          c.setString(1, courseName);
-                          c.setInt(2,cDeptID );
-                    
-                          c.executeUpdate();
-                    response.sendRedirect("ViewCoursePage.jsp");
+                try (PreparedStatement ps = connection.prepareStatement(insert)) {
+                    if (!facultyName.isEmpty()) {
+                        ps.setString(1, facultyName);
+                        
+                     ps.executeUpdate();
+                    response.sendRedirect("ViewFacultyPage.jsp");
                     }else{
-                        out.write("failed");
+                        out.write("All fields are required");
                     }
-                  
-                } catch (SQLException ex) {
-                    System.out.println(ex);
+                } catch (SQLException e) {
+                    System.out.println(e);
                 }
+                
             } catch (Exception e) {
                 System.out.println(e);
             }

@@ -20,7 +20,9 @@ import java.sql.*;
  */
 @WebServlet(name = "SingUpPs", urlPatterns = {"/SingUpPs"})
 public class SingUpPs extends HttpServlet {
+
       private static final String JDBC_URL="jdbc:mysql://localhost:3306/realworlddb";
+
     private static final String JDBC_USER="root";
     private static final String JDBC_PASSWORD="";
      

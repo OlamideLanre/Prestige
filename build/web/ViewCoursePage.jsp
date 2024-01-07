@@ -88,39 +88,6 @@
                                 }
                         
                         %>
-<!--                        <div class="table-container">
-                            <table>
-                                <thead>
-                                <tr>
-                                    <th>Course name</th>
-                                    <th>Course ID</th>
-                                    <th>Staff ID</th>
-                                    <th>Departmet ID</th>
-                                    <th>Action</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>Blog 1</td>
-                                    <td>1</td>
-                                    <td>4</td>
-                                    <td>01</td>
-                                    <td>
-                                    <a class="edit" href="addcoursepage.html">Edit</a>
-                                    <a class="delete" href="#">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Blog 2</td>
-                                    <td>1</td>
-                                    <td>4</td>
-                                    <td>01</td>
-                                    <td>
-                                    <a class="edit" href="addcoursepage.html">Edit</a>
-                                    <a class="delete" href="#">Delete</a>
-                                    </td>
-                                </tr>
-                                -->
                                 <!-- Add more rows as needed -->
                                 </tbody>
                             </table>
