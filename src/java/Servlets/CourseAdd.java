@@ -44,7 +44,7 @@ public class CourseAdd extends HttpServlet {
                           c.setInt(2,cDeptID );
                     
                           c.executeUpdate();
-                    response.sendRedirect("viewcoursepage.html");
+                    response.sendRedirect("ViewCoursePage.jsp");
                     }else{
                         out.write("failed");
                     }
