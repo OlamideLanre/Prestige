@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Faculty Page</title>
+    <link rel="stylesheet" href="./styles/addfacultypage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        
+        <div class="content">
+            <nav>
+                <div class="left">
+                    <a class="btn" href="./facultypage.html"><div class="logout"> <i class="fa fa-arrow-left" aria-hidden="true" style="color: #222;"></i>    Back</div></a>
+                </div>
+                <div style="width: 200px;" class="middle">
+                    <h2>ADD FACULTY</h2>
+                </div>
+                <div class="right">
+                    <img style="width: 100px;" src="./images/logo2.png" alt="logo">
+                </div>
+            </nav>
+
+            <div class="boxes">
+                <form method="POST" action="FacultyAdd">
+                <div class="inner-content">
+                    <div class="left">
+                        <h5>Faculty Name</h5>
+                        <input type="text" name="FacultyName" id="FacultyName">
+                        <h5>Faculty ID</h5>
+                        <input type="text" name="FacultyID" id="FacultyID">
+                            <a style="margin-top: 10px;" id="btn" class="addbtn" href="#">ADD</a>
+                            <a style="margin-top: 10px;" id="btn" href="#" class="updatebtn">UPDATE</a>
+                    </div>
+
+                    <div class="right">
+                        <img style="width: 270px;" src="./images/business-3d-woman-recruiter-leaning-on-browser-window-with-man-showing-v-sign-inside.png" alt="">
+                    </div>
+                   
+     
+               </div>
+               </form>
+
+            </div>
+        </div>
+    </div>
+    
+    
+    
+     <script>
+        let SubmitBtn = document.querySelector(".addbtn");
+        let UpdateBtn = document.querySelector(".updatebtn");
+
+            SubmitBtn.addEventListener("click", handler);
+            UpdateBtn.addEventListener("click", handler);
+
+            function handler() {
+                let FacultyName = document.getElementById("FacultyName");
+                let FacultyID =document.getElementById('FacultyID')
+
+                if (FacultyName.value === "" || FacultyID.value === "") {
+                    alert("All fields are required !");
+                    
+//                    e.preventDefault();
+                }else{
+                    console.log('configuration successful');
+                    alert('Added succesfully')
+                }
+                
+            }
+
+    </script>
+</body>
+</html>
