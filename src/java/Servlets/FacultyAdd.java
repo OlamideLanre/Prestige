@@ -33,18 +33,18 @@ public class FacultyAdd extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_PASSWORD, JDBC_USER);
-                System.out.print("connection succesful");
+                Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);    
+
+
+                System.out.print("connection successful");
                 
-                String insert = "INSERT INTO faculty(FacultyName, FacultyID) VALUES (?,?)";
+                String insert = "INSERT INTO faculty(FacultyName) VALUE (?)";
                 
                 String facultyName = request.getParameter("FacultyName");
-                int facultyId = Integer.valueOf(request.getParameter("FacultyID"));
                 
                 try (PreparedStatement ps = connection.prepareStatement(insert)) {
-                    if (!facultyName.isEmpty() && facultyId != 0) {
+                    if (!facultyName.isEmpty()) {
                         ps.setString(1, facultyName);
-                        ps.setInt(2, facultyId);
                         
                         ps.executeUpdate();
                     response.sendRedirect("viewfacultypage.html");
