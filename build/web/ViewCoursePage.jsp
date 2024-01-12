@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper" style="height: fit-content; padding-bottom: 10px">
         <div class="content">
             <nav>
                 <div class="left">
@@ -78,7 +78,7 @@
 //                                      out.print("<td>"+staffID+"</td>");
 //                                      out.print("<td>"+Courseid+"</td>");
                                       out.print("<td>");
-                                      out.print(" <a class='edit' href='edit.jsp?id="+ Courseid +"'>Edit</a>");
+                                      out.print(" <a class='edit' href='CourseUpdate.jsp?id="+ Courseid +"'>Edit</a>");
                                       out.print("<a class='delete' href='#'>Delete</a>");
                                       out.print("</td>");
                                       out.print("</tr>");
