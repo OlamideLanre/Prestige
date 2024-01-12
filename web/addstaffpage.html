@@ -23,35 +23,84 @@
             </nav>
 
             <div class="boxes">
-                <div class="inner-content">
+                <form method="POST" action="StaffAdd">
+                <div class="inner-content">         
                     <div class="left">
-                        <h5>Full Name</h5>
-                        <input type="text">
-                        <h5>Email</h5>
-                        <input type="email">
-                        <h5>Gender</h5>
-                        <input type="text">
+                        <h5>Staff ID</h5>
+                        <input type="text" name="StaffID" id="staffID">
+                        <h5>First Name</h5>
+                        <input type="text" name="FirstName" id="FirstName">
+                        <h5>Last Name</h5>
+                        <input type="text" name="LastName" id="LastName">
                         <h5>Academic Qualification</h5>
-                        <input type="text">
-                        <h5>Department ID</h5>
-                        <input type="text">
+                        <input type="text" name="Academic_Qualification" id="Academic_Qualification">
+                        <h5>Staff Department ID</h5>
+                        <input type="text" name="StaffDeptID" id="StaffDeptID">
                         <h5>Date of Birth</h5>
-                        <input type="date">
+                        <input type="text" name="Date_of_birth" id="Date_of_birth">
                         <h5>Hire Date</h5>
-                        <input type="date">
-                            <a style="margin-top: 10px;" id="btn" href="#">ADD</a>
-                            <a style="margin-top: 10px;" id="btn" href="#">UPDATE</a>
+                        <input type="text" name="HireDate" id="HireDate">
+                        <h5>Email</h5>
+                        <input type="email" name="Email" id="Email">
+                        <h5>Phone Number</h5>
+                        <input type="text" name="Phone_number" id="Phone_Number">
+                         <h5>Gender</h5>
+                         <input type="text" name="Gender" id="Gender">
+                            <button style="margin-top: 10px;" id="btn" class="AddBtn">ADD</button>
+                            <button type="submit" style="margin-top: 10px;" id="btn" >UPDATE</button>
                     </div>
 
                     <div class="right">
-                        <img style="width: 250px;" height="300px" src="./images/3d-business-man-and-woman-working-at-table-with-laptop.png" alt="">
+                        <img style="width: 250px; height: 300px" src="./images/3d-business-man-and-woman-working-at-table-with-laptop.png" alt="" />
                     </div>
-                   
      
                </div>
+                </form>
             </div>
             
         </div>
     </div>
+    <script>
+        let AddButton= document.querySelector(".AddBtn");
+        AddButton.addEventListener("click", handler)
+        
+        function handler(e) {
+            let staffID=document.getElementById("staffID")
+                let Fname = document.getElementById("FirstName");
+                let Lname=document.getElementById("LastName")
+                let Acad_Qual = document.getElementById("Academic_Qualification");
+                let Gender = document.getElementById('Gender');
+                let Email = document.getElementById("Email");
+                let Phone = document.getElementById("phoneNum");
+                let staffDepId=document.getElementById("StaffDeptID")
+                let hiredate=document.getElementById("HireDate")
+                let DOB=document.getElementById("Date_of_birth")
+
+                if (staffID.value===""||Fname.value === "" || Lname.value==="" || Gender.value === "" || Acad_Qual.value === "" ||
+                    Email.value === "" || Phone.value === ""|| staffDepId.value==="" || hiredate.value==="" ||
+                    DOB.value==="") {
+                    alert("All fields are required");
+                    e.preventDefault();
+                } else if (GenderCheck()) {
+                    console.log("check working");
+                    alert("Success");
+                } else {
+                    console.log('not working');
+                }
+                
+            }
+
+            function GenderCheck() {
+                const Gender = document.getElementById('Gender');
+
+                if (Gender.value === 'F' || Gender.value === 'M') {
+                    return true; // Returning true when condition is met
+                } else {
+                    alert('Enter F for Female, M for Male');
+                    return false; // Returning false when condition is not met
+                }
+            }
+
+    </script>
 </body>
 </html>

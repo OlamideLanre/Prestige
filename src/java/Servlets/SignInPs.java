@@ -47,7 +47,7 @@ public class SignInPs extends HttpServlet {
                     
                     if (rs.next()) {
                         out.write("Succesfull");
-                        response.sendRedirect("DashBoard.jsp");
+                        response.sendRedirect("dashboard.html");
                     } else {
                         System.out.println("failed to fetch");
                         out.write("failed to fetch");

@@ -26,11 +26,12 @@ body{
 
 .wrapper{
     width: 900px;;
-    height: 510px;
+    height: fit-content;
     border-radius: 10px;
     background-color: #424769;
     justify-content: space-between;
     position: relative;
+    padding-bottom: 20px;
 }
 .wrapper .content nav{
     display: flex;
