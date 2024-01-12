@@ -57,7 +57,7 @@ public class StaffAdd extends HttpServlet {
                         ps.setString(10, gender);
                         
                         ps.executeUpdate();
-                    response.sendRedirect("viewstaffpage.html");
+                    response.sendRedirect("ViewStaffPage.jsp");
                     }else{
                         out.write("All fields are required");
                     }

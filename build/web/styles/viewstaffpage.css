@@ -25,12 +25,13 @@ body{
 }
 
 .wrapper{
-    width: 2000px;
-    height: 510px;
+    width: fit-content;
+    height: fit-content;
     border-radius: 10px;
     background-color:#424769;
     justify-content: space-between;
     position: relative;
+    padding: 10px;
 }
 .wrapper .content nav{
     display: flex;
