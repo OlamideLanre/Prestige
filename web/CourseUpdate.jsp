@@ -32,7 +32,7 @@
 
             <div class="boxes">
                 <a href="FacultyUpdate.jsp"></a>
-                <form method="POST" action="CourseAdd">
+                <form method="POST" action="CourseUpdate">
                 <div class="inner-content">
                     <div class="left">
                                

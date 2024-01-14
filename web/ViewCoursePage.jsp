@@ -58,8 +58,6 @@
                               out.print("<th>Course Name</th>");
                               out.print(" <th>Course ID</th>");
                               out.print(" <th>Departent ID</th>");
-//                              out.print("<th>Staff ID</th>");
-//                              out.print("<th>Department ID</th>");
                               out.print("<th>Action</th>");
                               out.print("</tr>");
                               out.print("</thead>");
@@ -79,7 +77,7 @@
 //                                      out.print("<td>"+Courseid+"</td>");
                                       out.print("<td>");
                                       out.print(" <a class='edit' href='CourseUpdate.jsp?id="+ Courseid +"'>Edit</a>");
-                                      out.print("<a class='delete' href='#'>Delete</a>");
+                                      out.print("<a class='delete' href='CourseDelete?id="+ Courseid +"'>Delete</a>");
                                       out.print("</td>");
                                       out.print("</tr>");
                                  }
