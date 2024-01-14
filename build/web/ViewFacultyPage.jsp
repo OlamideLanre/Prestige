@@ -45,7 +45,6 @@
                              String JDBC_PASSWORD="";
                              
                              Connection con=DriverManager.getConnection(JDBC_URL,JDBC_USER,JDBC_PASSWORD);
-                             
                              String FacultyData="SELECT * FROM Faculty";
                              PreparedStatement ps=con.prepareStatement(FacultyData);
                              ResultSet rs= ps.executeQuery();
@@ -68,8 +67,9 @@
                                       out.print("<td>"+ FacID + "</td>");
                                       out.print("<td>"+FacName+"</td>");
                                       out.print("<td>");
+//                                      out.print("<input type='hidden' name='id' value="+id+"/>");
                                       out.print(" <a class='edit' href='FacultyUpdate.jsp?id="+ FacID +"'>Edit</a>");
-                                      out.print("<a class='delete' href='#'>Delete</a>");
+                                      out.print("<a class='delete' href='FacultyDelete?id="+FacID+"'>Delete</a>");
                                       out.print("</td>");
                                       out.print("</tr>");
                                  }
