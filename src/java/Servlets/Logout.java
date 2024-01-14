@@ -12,58 +12,26 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.*;
 import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author TM
  */
-@WebServlet(name = "SignInPs", urlPatterns = {"/SignInPs"})
-public class SignInPs extends HttpServlet {
-    private static final String JDBC_URL="jdbc:mysql://localhost:3306/realworlddb";
-    private static final String JDBC_USER="root";
-    private static final String JDBC_PASSWORD="";
-    
+@WebServlet(name = "Logout", urlPatterns = {"/Logout"})
+public class Logout extends HttpServlet {
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            try {
-                Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection con= DriverManager.getConnection(JDBC_URL,JDBC_USER,JDBC_PASSWORD);
-                System.out.println("Con Success");
-                
-                String select="select * from admins where AdminID=? and Admin_Password=?";
-                
-                int adminID= Integer.valueOf(request.getParameter("Nameinput"));
-                String A_pass= request.getParameter("PassInput");
-                
-                try(PreparedStatement ps= con.prepareStatement(select);){
-                    ps.setInt(1, adminID);
-                    ps.setString(2, A_pass);
-                    
-                    ResultSet rs =ps.executeQuery(); 
-                    
-                    if (rs.next()) {
-                        HttpSession session= request.getSession();
-                        session.setAttribute("adminID", adminID);
-                        response.sendRedirect("dashboard.html");
-                    } else {
-                        System.out.println("failed to fetch");
-                        out.write("failed to fetch");
-                    }
-                }
-            } catch (ClassNotFoundException | SQLException ex) {
-                System.out.println(ex);
-                ex.printStackTrace();
-            } catch(Exception e){
-                System.out.println(e);
-                e.printStackTrace();
-            }
-           
+             HttpSession session=request.getSession(false);
             
+            if (session!=null) {
+                session.invalidate();
             }
+            response.sendRedirect("signinpagePS.html");
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
