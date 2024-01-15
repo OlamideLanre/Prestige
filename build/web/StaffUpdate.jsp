@@ -19,7 +19,7 @@
         <div class="content">
             <nav>
                 <div class="left">
-                    <a class="btn" href="./staffpage.html"><div class="logout"> <i class="fa fa-arrow-left" aria-hidden="true" style="color: #222;"></i>    Back</div></a>
+                    <a class="btn" href="ViewStaffPape.jsp"><div class="logout"> <i class="fa fa-arrow-left" aria-hidden="true" style="color: #222;"></i>    Back</div></a>
                 </div>
                 <div style="width: 200px;" class="middle">
                     <h2>EDIT STAFF</h2>
