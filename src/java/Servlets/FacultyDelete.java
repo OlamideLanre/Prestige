@@ -35,8 +35,6 @@ public class FacultyDelete extends HttpServlet {
                 String delete="DELETE from faculty WHERE FacultyID=?";
                 
                 int facID=Integer.valueOf(request.getParameter("id"));
-                System.out.println(facID);
-                
                 PreparedStatement ps= con.prepareStatement(delete);
                 ps.setInt(1, facID );
                 ps.executeUpdate();
