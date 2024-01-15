@@ -69,8 +69,8 @@
                                       out.print("<td>"+DeptName+"</td>");
                                       out.print("<td>"+ FacID + "</td>");
                                       out.print("<td>");
-                                      out.print(" <a class='edit' href='edit.jsp?id="+ DeptID +"'>Edit</a>");
-                                      out.print("<a class='delete' href='#'>Delete</a>");
+                                      out.print(" <a class='edit' href='DepartUpdate.jsp?id="+ DeptID +"'>Edit</a>");
+                                      out.print("<a class='delete' href='DepartmentDelete?id="+DeptID+"'>Delete</a>");
                                       out.print("</td>");
                                       out.print("</tr>");
                                  }
