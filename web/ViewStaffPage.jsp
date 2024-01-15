@@ -82,7 +82,7 @@
                                       out.print("<td>"+Gender+"</td>");
                                       out.print("<td>");
                                       out.print(" <a class='edit' href='StaffUpdate.jsp?id="+ staffID +"'>Edit</a>");
-                                      out.print("<a class='delete' href='#'>Delete</a>");
+                                      out.print("<a class='delete' href='StaffDelete?id="+staffID+"'>Delete</a>");
                                       out.print("</td>");
                                       out.print("</tr>");
                                  }
