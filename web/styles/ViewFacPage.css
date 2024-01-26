@@ -16,6 +16,7 @@
     --main-color: #676f9d;
 }*/
 body{
+    padding-top: 30%;
     background-color:#2d3250;
     color:#f9b17a;
     height: 100vh;
@@ -40,7 +41,7 @@ body{
 }
 .wrapper .content nav .left, .right, .middle{
     width: 100px;
-    height: 50px;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;

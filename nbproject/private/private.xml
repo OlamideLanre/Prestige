@@ -4,13 +4,18 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/ViewFacultyPage.jsp</file>
-            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/FacultyAdd.java</file>
             <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/addfacultypage.html</file>
-            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/SingUpPs.java</file>
-            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/signinpagePS.html</file>
             <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/FacultyUpdate.jsp</file>
             <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/signuppagePS.html</file>
             <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/SignInPs.java</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/dashboard.html</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/CourseDelete.java</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/styles/facultypage.css</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/CourseUpdate.jsp</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/styles/viewfacultypage.css</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/SingUpPs.java</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/StaffAdd.java</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/signinpagePS.html</file>
         </group>
     </open-files>
 </project-private>
