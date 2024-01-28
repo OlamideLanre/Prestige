@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -50,8 +51,9 @@ public class SignInPs extends HttpServlet {
                         session.setAttribute("adminID", adminID);
                         response.sendRedirect("dashboard.html");
                     } else {
-                        System.out.println("failed to fetch");
-                        out.write("failed to fetch");
+                        request.setAttribute("ErrorMessage", "Invalid ID or Pasword!!");
+                        RequestDispatcher RD= request.getRequestDispatcher("SignInPs.jsp");
+                        RD.forward(request, response);
                     }
                 }
             } catch (ClassNotFoundException | SQLException ex) {

@@ -1,3 +1,10 @@
+<%-- 
+    Document   : SignIn
+    Created on : Jan 27, 2024, 3:00:40 PM
+    Author     : TM
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +29,17 @@
                     <input type="password" id="PassInput" name="PassInput">
                     <input type="submit" id="btn" />
                     <div class="socials">
-                        <span>Want to add new Admin? <a href="./signuppagePS.html">Sign Up</a> </span>
+                        <span>Want to add new Admin?<a href="./signuppagePS.html">Sign Up</a> </span>
                     </div>
+                            <%
+                    // Check for the presence of the error message
+                    String errorMessage = (String) request.getAttribute("ErrorMessage");
+                    if (errorMessage != null) {
+                %>
+                <p style="font-size: 20px; text-align: center; color: white;"><%= errorMessage%></p>
+                <%
+                    }
+                %>
                </div>
                </form>
             </div>
