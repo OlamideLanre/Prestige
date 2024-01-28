@@ -16,9 +16,9 @@
     --main-color: #676f9d;
 }*/
 body{
+    padding-top: 15px;
     background-color: #2d3250;
     color: #f9b17a;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;

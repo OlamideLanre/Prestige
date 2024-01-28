@@ -16,17 +16,17 @@
     --main-color: #676f9d;
 }*/
 body{
+    padding-top: 15px;
     background-color: #2d3250;
     color: #f9b17a;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .wrapper{
-    width: 900px;;
-    height: 510px;
+    width: 1050px;
+    height: fit-content;
     border-radius: 10px;
     background-color: #424769;
     justify-content: space-between;
@@ -53,8 +53,9 @@ body{
 
 
 .dashboard {
+    /*width: fit-content;*/
     background-color: #2d3250;
-    max-width: 800px;
+    max-width: 950px;
     margin: 20px auto;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
