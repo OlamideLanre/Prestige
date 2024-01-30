@@ -4,13 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/dashboard.html</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/StudentsDelete.java</file>
             <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/ViewPayment.jsp</file>
-            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/PaymentUpdate.jsp</file>
-            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/PaymentUpdate.java</file>
-            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/addfeespage.html</file>
-            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/DepartmentUpdate.java</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/ViewStudents.jsp</file>
             <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/SignInPs.jsp</file>
-            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/styles/AddCourse.css</file>
         </group>
     </open-files>
 </project-private>
