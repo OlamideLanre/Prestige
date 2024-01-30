@@ -21,7 +21,7 @@
         <div class="content">
             <nav>
                 <div class="left">
-                    <a class="btn" href="./studentpage.html"><div class="logout"> <i class="fa fa-arrow-left" aria-hidden="true" style="color: #222;"></i>    Back</div></a>
+                    <a class="btn" href="./ViewStudents.jsp"><div class="logout"> <i class="fa fa-arrow-left" aria-hidden="true" style="color: #222;"></i>    Back</div></a>
                 </div>
                 <div style="width: 300px;" class="middle">
                     <h2>VIEW STUDENT PAGE</h2>
@@ -79,7 +79,7 @@
                                       out.print("<td>"+Email+"</td>");
                                       out.print("<td>"+Reg+"</td>");
                                       out.print("<td>");
-                                      out.print(" <a class='edit' href='PaymentUpdate.jsp?id="+ StudentID +"'>Edit</a>");
+                                      out.print(" <a class='edit' href='StudentUpdate.jsp?id="+ StudentID +"'>Edit</a>");
                                       out.print("<a class='delete' href='StudentsDelete?id="+StudentID+"'>Delete</a>");
                                       out.print("</td>");
                                       out.print("</tr>");
