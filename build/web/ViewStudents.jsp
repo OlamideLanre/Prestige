@@ -21,7 +21,7 @@
         <div class="content">
             <nav>
                 <div class="left">
-                    <a class="btn" href="./ViewStudents.jsp"><div class="logout"> <i class="fa fa-arrow-left" aria-hidden="true" style="color: #222;"></i>    Back</div></a>
+                    <a class="btn" href="./studentpage.html"><div class="logout"> <i class="fa fa-arrow-left" aria-hidden="true" style="color: #222;"></i>    Back</div></a>
                 </div>
                 <div style="width: 300px;" class="middle">
                     <h2>VIEW STUDENT PAGE</h2>
@@ -92,11 +92,16 @@
                 <%
                     // Check for the presence of the error message
                     String errorMessage = (String) request.getAttribute("ErrorMessage");
+                    String Message = (String) request.getAttribute("SuccessMessage");
                     if (errorMessage != null) {
                 %>
                 <p style="font-size: 20px; text-align: center; color: white;" id='errMess'><%= errorMessage%></p>
                 <%
-                    }
+                    }else if(Message!=null){
+                %>
+                <p style="font-size: 20px; text-align: center; color: white;" id='errMess'><%= Message%></p>
+                <%
+                }
                 %>
                                 <!-- Add more rows as needed -->
                                 </tbody>

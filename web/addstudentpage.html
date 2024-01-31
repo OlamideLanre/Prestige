@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper" style="height: 570px">
         <div class="content">
             <nav>
                 <div class="left">
@@ -23,32 +23,38 @@
             </nav>
 
             <div class="boxes">
+                <form method="Post" action="StudentAdd">
                 <div class="inner-content">
                     <div class="left">
-                        <h5>Full Name</h5>
-                        <input type="text">
-                        <h5>Phone Number</h5>
-                        <input type="text">
-                        <h5>Department</h5>
-                        <input type="text">
-                        <h5>Department ID</h5>
-                        <input type="text">
-                        <h5>Registration Number</h5>
-                        <input type="text">
-                        <h5>Date of Birth</h5>
-                        <input type="date">
-                        <h5>Email</h5>
-                        <input type="email">
-                            <a style="margin-top: 10px;" id="btn" href="#">ADD</a>
-                            <a style="margin-top: 10px;" id="btn" href="#">UPDATE</a>
+                                <h5>Student ID</h5>
+                                 <input type='text' name='studID' id="studID" >
+                                 <h5>First Name</h5>
+                                 <input type='text' name='FirstName' id="FirstName">
+                                 <h5>Last Name</h5>
+                                 <input type='text' name='LastName' id="LastNam">
+                                 <h5>Department</h5>
+                                 <input type='text' name='dept' id="dept">
+                                 <h5>DOB</h5>
+                                 <input type='text' name="DOB" id="DOB" >
+                                 <h5>Reg.No</h5>
+                                 <input type='text' name="regNum" id="regNum" >
+                                 <h5>Email</h5>
+                                 <input type='text' name='Email' id="Email">
+                                 <h5>Phone Number</h5>
+                                 <input type='text' name='Phone_number' id="Phone_number">
+                                 <h5>Semester</h5>
+                                 <input type='text' name='Sem' id="Sem">
+                            <button style="margin-top: 10px;" id="btn">ADD</button>
+                            <!--<a style="margin-top: 10px;" id="btn" href="#">UPDATE</a>-->
                     </div>
 
                     <div class="right">
-                        <img style="width: 250px;" height="350px" src="./images/3d-business-young-women-standing-and-smiling.png" alt="">
+                        <img style="width: 250px; height: 350px" src="./images/3d-business-young-women-standing-and-smiling.png" alt="">
                     </div>
                    
      
                </div>
+                    </form>
             </div>
             
         </div>
