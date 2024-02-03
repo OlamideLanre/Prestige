@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
+import javax.servlet.RequestDispatcher;
 
 @WebServlet(name = "StaffUpdate", urlPatterns = {"/StaffUpdate"})
 public class StaffUpdate extends HttpServlet {
@@ -44,8 +45,9 @@ private static final String JDBC_URL="jdbc:mysql://localhost:3306/realworlddb";
                 ps.setString(7, staffID);
                 ps.executeUpdate();
                 
-                System.out.println(PhoneNum);
-                response.sendRedirect("ViewStaffPage.jsp");
+                request.setAttribute("UpdateMessage","Successfully Updated");
+                RequestDispatcher RD= request.getRequestDispatcher("ViewStaffPage.jsp");
+                RD.forward(request, response);
             } catch (Exception e) {
                 System.out.println(e);
             }

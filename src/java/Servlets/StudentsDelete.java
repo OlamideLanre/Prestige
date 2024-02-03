@@ -53,6 +53,9 @@ public class StudentsDelete extends HttpServlet {
 //                    RequestDispatcher RD= request.getRequestDispatcher("ViewStudents.jsp");
 //                    RD.forward(request, response);
 //                }
+                request.setAttribute("ErrorMessage","Success");
+                RequestDispatcher ReD= request.getRequestDispatcher("ViewStudents.jsp");
+                ReD.forward(request, response);
             } catch (Exception e) {
                 System.out.println(e);
             }

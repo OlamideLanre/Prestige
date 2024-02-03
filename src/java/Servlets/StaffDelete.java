@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
+import javax.servlet.RequestDispatcher;
 
 @WebServlet(name = "StaffDelete", urlPatterns = {"/StaffDelete"})
 public class StaffDelete extends HttpServlet {
@@ -34,7 +35,9 @@ public class StaffDelete extends HttpServlet {
                 PreparedStatement ps=connection.prepareStatement(del);
                 ps.setString(1, staffID);
                 ps.executeUpdate();
-                response.sendRedirect("ViewStaffPage.jsp");
+                request.setAttribute("DeleteMessage","Successfully Deleted");
+                RequestDispatcher RD= request.getRequestDispatcher("ViewStaffPage.jsp");
+                RD.forward(request, response);
             } catch (Exception e) {
                 System.out.println(e);
             }

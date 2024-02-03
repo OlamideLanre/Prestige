@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
+import javax.servlet.RequestDispatcher;
 
 
 @WebServlet(urlPatterns = {"/StaffAdd"})
@@ -57,7 +58,9 @@ public class StaffAdd extends HttpServlet {
                         ps.setString(10, gender);
                         
                         ps.executeUpdate();
-                    response.sendRedirect("ViewStaffPage.jsp");
+                  request.setAttribute("SuccessMessage","Successfully Added Information");
+                  RequestDispatcher RD= request.getRequestDispatcher("ViewStaffPage.jsp");
+                  RD.forward(request, response);
                     }else{
                         out.write("All fields are required");
                     }

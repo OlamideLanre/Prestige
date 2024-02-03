@@ -6,10 +6,10 @@
             <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/dashboard.html</file>
             <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/StudentsDelete.java</file>
             <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/addstudentpage.html</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/styles/addstudentpage.css</file>
             <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/ViewStudents.jsp</file>
-            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/StudentUpdate.jsp</file>
-            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/StaffUpdate.jsp</file>
             <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/StudentUpdate.java</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/StudentAdd.java</file>
         </group>
     </open-files>
 </project-private>

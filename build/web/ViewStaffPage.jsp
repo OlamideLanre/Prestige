@@ -93,6 +93,27 @@
                         
                         
                         %>
+                        
+                            <%
+                    // Check for the presence of the error message
+                    String DeleteMessage = (String) request.getAttribute("DeleteMessage");
+                    String UpdateMessage = (String) request.getAttribute("UpdateMessage");
+                    String SuccessMessage = (String) request.getAttribute("SuccessMessage");
+                    if (DeleteMessage != null) {
+                %>
+                <p style="font-size: 20px; text-align: center; color: white;" id='errMess'><%= DeleteMessage%></p>
+                <%
+                    }else if(SuccessMessage!=null){
+                %>
+                <p style="font-size: 20px; text-align: center; color: white;" id='errMess'><%= SuccessMessage%></p>
+                <%
+                }else if(UpdateMessage!=null){
+                %>
+                <p style="font-size: 20px; text-align: center; color: white;" id='errMess'><%=UpdateMessage %></p>
+                 <%
+                }
+                %>
+                
                                 
                                 <!-- Add more rows as needed -->
                                 </tbody>
@@ -104,5 +125,10 @@
             
         </div>
     </div>
+     <script>
+         const Ptag= document.getElementById('errMess');
+            setTimeout(()=>{Ptag.innerHTML="";},10000);
+            console.log(Ptag)
+    </script>
 </body>
 </html>
