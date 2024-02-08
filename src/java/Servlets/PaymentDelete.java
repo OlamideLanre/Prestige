@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
+import javax.servlet.RequestDispatcher;
 /**
  *
  * @author TM
@@ -37,9 +38,10 @@ public class PaymentDelete extends HttpServlet {
                 String id=request.getParameter("id");
                 PreparedStatement ps=connection.prepareStatement(deletepDept);
                 ps.setString(1, id);
-                System.out.println(id);
                 ps.executeUpdate();
-                response.sendRedirect("ViewPayment.jsp");
+                 request.setAttribute("DeleteMessage","Successfully Deleted");
+                RequestDispatcher RD= request.getRequestDispatcher("ViewPayment.jsp");
+                RD.forward(request, response);
                 
             } catch (Exception e) {
                 System.out.println(e);

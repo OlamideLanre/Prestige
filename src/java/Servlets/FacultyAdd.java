@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
+import javax.servlet.RequestDispatcher;
 
 /**
  *
@@ -47,9 +48,11 @@ public class FacultyAdd extends HttpServlet {
                         ps.setString(1, facultyName);
                         
                      ps.executeUpdate();
-                    response.sendRedirect("ViewFacultyPage.jsp");
+                    request.setAttribute("SuccessMessage","Successfully Added Information");
+                  RequestDispatcher RD= request.getRequestDispatcher("ViewFacultyPage.jsp");
+                  RD.forward(request, response);
                     }else{
-                        out.write("All fields are required");
+                        System.err.println("All fields are required");
                     }
                 } catch (SQLException e) {
                     System.out.println(e);

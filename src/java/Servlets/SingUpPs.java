@@ -53,24 +53,11 @@ public class SingUpPs extends HttpServlet {
                     
                     ps.executeUpdate();
                     
-                    response.sendRedirect("signinpagePS.html");
+                    response.sendRedirect("index.html");
                     } else {
-                        out.write("All fields are required");
+                        System.out.println("All fields are required");
                     }
                    
-                    
-//                    String select= "select * from admins";
-//                    try(PreparedStatement ps1=con.prepareStatement(select)) {
-//                        ResultSet rs= ps1.executeQuery();
-//                        if (rs.next()) {
-//                            out.write("success");
-//                        } else {
-//                            out.write("failed to fetch");
-//                        }
-//                        
-//                    } catch (SQLException ex) {
-//                        System.out.println(ex);
-//                    }
                     
                 } catch (SQLException e) {
                     System.out.println(e);
@@ -80,16 +67,6 @@ public class SingUpPs extends HttpServlet {
                 System.out.println(e);
             }
             
-            /* TODO output your page here. You may use following sample code. */
-//            out.println("<!DOCTYPE html>");
-//            out.println("<html>");
-//            out.println("<head>");
-//            out.println("<title>Servlet SingUpPs</title>");            
-//            out.println("</head>");
-//            out.println("<body>");
-//            out.println("<h1>Servlet SingUpPs at " + request.getContextPath() + "</h1>");
-//            out.println("</body>");
-//            out.println("</html>");
         }
     }
 

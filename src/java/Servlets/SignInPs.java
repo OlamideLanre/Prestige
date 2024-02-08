@@ -1,4 +1,4 @@
-/*
+   /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -49,14 +49,17 @@ public class SignInPs extends HttpServlet {
                     if (rs.next()) {
                         HttpSession session= request.getSession();
                         session.setAttribute("adminID", adminID);
-                        response.sendRedirect("dashboard.html");
+                        response.sendRedirect("Dashboard.jsp");
                     } else {
                         request.setAttribute("ErrorMessage", "Invalid ID or Pasword!!");
                         RequestDispatcher RD= request.getRequestDispatcher("SignInPs.jsp");
                         RD.forward(request, response);
                     }
                 }
-            } catch (ClassNotFoundException | SQLException ex) {
+            } catch (ClassNotFoundException | NumberFormatException ex) {
+                request.setAttribute("SqlMessage", "Alpahbets not valid for ID input!!");
+                        RequestDispatcher RD= request.getRequestDispatcher("SignInPs.jsp");
+                        RD.forward(request, response);
                 System.out.println(ex);
                 ex.printStackTrace();
             } catch(Exception e){

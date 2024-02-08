@@ -70,7 +70,7 @@
                                       out.print("<td>"+ FacID + "</td>");
                                       out.print("<td>");
                                       out.print(" <a class='edit' href='DepartUpdate.jsp?id="+ DeptID +"'>Edit</a>");
-                                      out.print("<a class='delete' href='DepartmentDelete?id="+DeptID+"'>Delete</a>");
+                                      out.print("<a class='delete' onClick='ConfirmDelete(event)' href='DepartmentDelete?id="+DeptID+"'>Delete</a>");
                                       out.print("</td>");
                                       out.print("</tr>");
                                  }
@@ -79,6 +79,27 @@
     
                         
                         %>
+                        
+                         <%
+                    // Check for the presence of the error message
+                    String DeleteMessage = (String) request.getAttribute("DeleteMessage");
+                    String UpdateMessage = (String) request.getAttribute("UpdateMessage");
+                    String SuccessMessage = (String) request.getAttribute("SuccessMessage");
+                    if (DeleteMessage != null) {
+                %>
+                <p style="font-size: 20px; text-align: center; color: white;" id='errMess'><%= DeleteMessage%></p>
+                <%
+                    }else if(SuccessMessage!=null){
+                %>
+                <p style="font-size: 20px; text-align: center; color: white;" id='errMess'><%= SuccessMessage%></p>
+                <%
+                }else if(UpdateMessage!=null){
+                %>
+                <p style="font-size: 20px; text-align: center; color: white;" id='errMess'><%=UpdateMessage %></p>
+                 <%
+                }
+                %>
+                
 
                                 <!-- Add more rows as needed -->
                                 </tbody>
@@ -91,4 +112,18 @@
         </div>
     </div>
 </body>
+ <script>
+         const Ptag= document.getElementById('errMess');
+            setTimeout(()=>{Ptag.innerHTML="";},10000);
+            console.log(Ptag)
+            
+                 function ConfirmDelete(event){
+             if(confirm("Are you sure you want to delete this?")){
+                 console.log("deleted");
+             }else{
+                 alert("Delete Canclled");
+                 event.preventDefault();
+             }
+         }
+    </script>
 </html>

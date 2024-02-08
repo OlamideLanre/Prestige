@@ -3,13 +3,26 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/dashboard.html</file>
-            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/StudentsDelete.java</file>
-            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/addstudentpage.html</file>
-            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/styles/addstudentpage.css</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/ViewPayment.jsp</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/CourseAdd.java</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/ViewFacultyPage.jsp</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/DepartmentDelete.java</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/CourseUpdate.java</file>
             <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/ViewStudents.jsp</file>
-            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/StudentUpdate.java</file>
-            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/StudentAdd.java</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/styles/viewdepartmentpage.css</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/FacultyUpdate.jsp</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/dashboard.html</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/addstudentpage.html</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/ViewDepartmentPage.jsp</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/CourseDelete.java</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/addcoursepage.html</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/addDepartment.html</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/src/java/Servlets/DepartmentUpdate.java</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/CourseUpdate.jsp</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/ViewStaffPage.jsp</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/ViewCoursePage.jsp</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/DepartUpdate.jsp</file>
+            <file>file:/C:/Users/TM/Documents/NetBeansProjects/PrestigeSchool/web/styles/AddCourse.css</file>
         </group>
     </open-files>
 </project-private>

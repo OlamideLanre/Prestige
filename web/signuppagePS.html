@@ -25,11 +25,11 @@
                     <h5>Password</h5>
                     <input type="password" id="adminPass" name="adminpass"/>
                     <span style="width: 200px; height: 30px; display: flex; justify-content: center;align-items: center; gap: 10px;"><input class="check" type="checkbox"><span> I agree to all <a href="#">terms and conditions.</a></span> </span>
-                    <input type="submit" id="btn"/>
-                    <!--<button id="btn" onclick="handler()">Submit</button>-->
+                    <!--<input type="submit" id="btn"/>-->
+                    <button id="btn">Create</button>
 
                     <div class="socials">
-                        <span>Already an Admin? <a href="./signinpagePS.html">Sign in</a> </span>
+                        <span>Already an Admin? <a href="./index.html">Sign in</a> </span>
                     </div>
                </div>
                     </form>
@@ -53,7 +53,7 @@
             SubmitBtn.addEventListener("click", handler);
             // SubmitBtn.addEventListener("click", GenderCheck);
 
-            function handler() {
+            function handler(e) {
                 let Fname = document.getElementById("fullname");
                 let Gender=document.getElementById('gender')
                 let Email=document.getElementById("email")
@@ -62,7 +62,7 @@
 
                 if (Fname.value === "" || password.value === "" || Gender.value==="" ||
                 Email.value===""||Phone.value==="") {
-                    alert("All fields are required to create neww admin account!");
+                    alert("All fields are required to create new admin account!");
                     
 //                    e.preventDefault();
                 } else if(GenderCheck()===true){
@@ -92,6 +92,8 @@
                 //  Email.value = "";
                 //  Phone.value ="";
                 // password.value = "";
+                
+                e.preventDefault();
             }
 
     </script>

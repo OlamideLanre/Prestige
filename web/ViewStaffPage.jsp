@@ -82,7 +82,7 @@
                                       out.print("<td>"+Gender+"</td>");
                                       out.print("<td>");
                                       out.print(" <a class='edit' href='StaffUpdate.jsp?id="+ staffID +"'>Edit</a>");
-                                      out.print("<a class='delete' href='StaffDelete?id="+staffID+"'>Delete</a>");
+                                      out.print("<a class='delete' onClick='ConfirmDelete(event)' href='StaffDelete?id="+staffID+"'>Delete</a>");
                                       out.print("</td>");
                                       out.print("</tr>");
                                  }
@@ -126,9 +126,23 @@
         </div>
     </div>
      <script>
-         const Ptag= document.getElementById('errMess');
-            setTimeout(()=>{Ptag.innerHTML="";},10000);
-            console.log(Ptag)
+         const Ptag= document.querySelector('p');
+//         document.queryselector
+            if(Ptag){
+                setTimeout(()=>{Ptag.innerHTML="";},6000);
+            console.log(Ptag);
+            }else{
+                console.log("errMess ID doe not exist")
+            }
+
+            function ConfirmDelete(event){
+                if(confirm("Are you sure you want to delete this?")){
+                    console.log("deleted");
+                }else{
+                    alert("Delete action cancelled")
+                    event.preventDefault();
+                }
+            }
     </script>
 </body>
 </html>

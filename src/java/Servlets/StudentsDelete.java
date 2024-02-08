@@ -44,18 +44,15 @@ public class StudentsDelete extends HttpServlet {
                 PreparedStatement ps=connection.prepareStatement(deleteData);
                 ps.setString(1, id);
                 ps.executeUpdate();
-                request.setAttribute("ErrorMessage","Success");
-                    RequestDispatcher RD= request.getRequestDispatcher("ViewStudents.jsp");
-                    RD.forward(request, response);
+                request.setAttribute("DeleteMessage","Successfully Deleted");
+                RequestDispatcher RD= request.getRequestDispatcher("ViewStudents.jsp");
+                RD.forward(request, response);
 //                response.sendRedirect("ViewStudents.jsp");
 //                } else {
 //                    request.setAttribute("ErrorMessage","Failed to delete,Try again.");
 //                    RequestDispatcher RD= request.getRequestDispatcher("ViewStudents.jsp");
 //                    RD.forward(request, response);
 //                }
-                request.setAttribute("ErrorMessage","Success");
-                RequestDispatcher ReD= request.getRequestDispatcher("ViewStudents.jsp");
-                ReD.forward(request, response);
             } catch (Exception e) {
                 System.out.println(e);
             }

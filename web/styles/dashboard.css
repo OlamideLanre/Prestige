@@ -18,10 +18,13 @@
 body{
     background-color: #2d3250;
     color: #f9b17a;
-    height: 100vh;
-    display: flex;
+   
+}
+.mainContainer{
     justify-content: center;
     align-items: center;
+     height: 100vh;
+    display: flex;
 }
 .btn{
     position: absolute;

@@ -1,3 +1,11 @@
+<%-- 
+    Document   : Dashboard
+    Created on : Feb 7, 2024, 7:19:44 PM
+    Author     : TM
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +15,10 @@
     <link rel="stylesheet" href="./styles/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body>
-    <div class="wrapper">
+     <div class="mainContainer">
+            <div class="wrapper">
         <div class="content">
             <div class="logo">
                 <div class="inner-content">
@@ -41,5 +51,18 @@
             </div>
         </div>
     </div>
+    </div>
+           <% 
+        String Admin=session.getAttribute("adminID").toString();
+        if(Admin!=null){
+    %>
+    <span style="font-size: 12px; color: white; text-align: left; margin-bottom: 0px; margin: 0px">Active: Admin <%= Admin%></span>
+    <%
+        }else{
+    %>
+    <span style="font-size: 18px; text-align: center; color: white; margin-bottom: 20px">Admin id not found</span>
+    <%
+        }
+     %>
 </body>
 </html>

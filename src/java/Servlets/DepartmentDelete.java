@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
+import javax.servlet.RequestDispatcher;
 
 /**
  *
@@ -38,7 +39,9 @@ public class DepartmentDelete extends HttpServlet {
                 PreparedStatement ps=connection.prepareStatement(deleteDept);
                 ps.setInt(1, id);
                 ps.executeUpdate();
-                response.sendRedirect("ViewDepartmentPage.jsp");
+                 request.setAttribute("DeleteMessage","Successfully Deleted");
+                RequestDispatcher RD= request.getRequestDispatcher("ViewDepartmentPage.jsp");
+                RD.forward(request, response);
             } catch (Exception e) {
                 System.out.println(e);
             }

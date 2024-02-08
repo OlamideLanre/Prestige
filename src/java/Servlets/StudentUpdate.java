@@ -61,7 +61,7 @@ public class StudentUpdate extends HttpServlet {
                 ps.setString(8, Semester);
                 ps.setString(9, ID);
                 ps.executeUpdate();
-                request.setAttribute("ErrorMessage","Success");
+                request.setAttribute("UpdateMessage","Successfully Updated");
                 RequestDispatcher RD= request.getRequestDispatcher("ViewStudents.jsp");
                 RD.forward(request, response);
             } catch (Exception e) {

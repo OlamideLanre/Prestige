@@ -62,7 +62,7 @@ public class StaffAdd extends HttpServlet {
                   RequestDispatcher RD= request.getRequestDispatcher("ViewStaffPage.jsp");
                   RD.forward(request, response);
                     }else{
-                        out.write("All fields are required");
+                        System.err.println("All fields are required");
                     }
                 } catch (SQLException e) {
                     System.out.println(e);

@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
+import javax.servlet.RequestDispatcher;
 
 @WebServlet(name = "CourseDelete", urlPatterns = {"/CourseDelete"})
 public class CourseDelete extends HttpServlet {
@@ -35,7 +36,9 @@ public class CourseDelete extends HttpServlet {
                 PreparedStatement delete=con.prepareStatement(courseDelete);
                 delete.setInt(1, id);
                 delete.executeUpdate();
-                response.sendRedirect("ViewCoursePage.jsp");
+                 request.setAttribute("DeleteMessage","Successfully Deleted");
+                RequestDispatcher RD= request.getRequestDispatcher("ViewCoursePage.jsp");
+                RD.forward(request, response);
             } catch (Exception e) {
                 System.out.println(e);
             }

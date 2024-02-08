@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
+import javax.servlet.RequestDispatcher;
 /**
  *
  * @author TM
@@ -46,9 +47,11 @@ public class CourseAdd extends HttpServlet {
                           c.setInt(2,cDeptID );
                     
                           c.executeUpdate();
-                    response.sendRedirect("ViewCoursePage.jsp");
+                    request.setAttribute("SuccessMessage","Successfully Added Information");
+                  RequestDispatcher RD= request.getRequestDispatcher("ViewCoursePage.jsp");
+                  RD.forward(request, response);
                     }else{
-                        out.write("failed");
+                        System.err.println("failed");
                     }
                   
                 } catch (SQLException ex) {

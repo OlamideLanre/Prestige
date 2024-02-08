@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
+import javax.servlet.RequestDispatcher;
 
 /**
  *
@@ -51,8 +52,10 @@ public class PaymentUpdate extends HttpServlet {
                 ps.setString(6, OutStand);
                 ps.setString(7, studID);
                 ps.executeUpdate();
-                System.out.println(Sem);
-                response.sendRedirect("ViewPayment.jsp");
+                
+                request.setAttribute("UpdateMessage","Successfully Updated");
+                RequestDispatcher RD= request.getRequestDispatcher("ViewPayment.jsp");
+                RD.forward(request, response);
             } catch (Exception e) {
                 System.out.println(e);
             }

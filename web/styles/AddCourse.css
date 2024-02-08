@@ -89,6 +89,16 @@ body{
     background-color: #676f9d;
     color: #ffffff;
 }
+
+.boxes .inner-content textarea{
+    border-radius: 5px;
+    padding: 10px;
+    width: 250px;
+    height: 28px;
+    background-color: #676f9d;
+    color: #ffffff;
+}
+
 #btn{
     padding: 10px;
     display: flex;

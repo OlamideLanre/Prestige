@@ -56,7 +56,7 @@
                                  out.write("<h5>Department ID</h5>");
                                  out.write("<input type='text name='deptID' id='deptID' value="+deptID+">");
                                  out.write("<h5>Department Name</h5>");
-                                 out.write("<input type='text' id='DepartmentName' name='DepartmentName' value="+deptName+"/>");
+                                 out.write("<input type='text' id='DepartmentName' name='DepartmentName' value=" +deptName+ ">");
                                  out.write("<h5>Faculty ID</h5>");
                                  out.write("<input type='text' id='FacultyID' name='FacultyID value="+facId+"/>");
                                  out.print("<input type='hidden' id='id' name='id' value="+id+">");
@@ -78,5 +78,6 @@
             
         </div>
     </div>
+
 </body>
 </html>

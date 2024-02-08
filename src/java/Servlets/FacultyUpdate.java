@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
+import javax.servlet.RequestDispatcher;
 
 @WebServlet(name = "FacultyUpdate", urlPatterns = {"/FacultyUpdate"})
 public class FacultyUpdate extends HttpServlet {
@@ -38,7 +39,9 @@ public class FacultyUpdate extends HttpServlet {
                 ps.setString(1, name);
                 ps.setInt(2, FacID);
                 ps.executeUpdate();
-                response.sendRedirect("ViewFacultyPage.jsp");
+                request.setAttribute("UpdateMessage","Successfully Updated");
+                RequestDispatcher RD= request.getRequestDispatcher("ViewFacultyPage.jsp");
+                RD.forward(request, response);
             } catch (Exception e) {
                 System.out.println(e);
             }
